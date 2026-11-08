@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.MedicationReminderApp" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/teal_800</item>
+        <item name="colorPrimaryVariant">@color/teal_900</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal_mint</item>
+        <item name="android:windowBackground">@color/bg_app_mist</item>
+        <item name="android:statusBarColor">#123A3E</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>
