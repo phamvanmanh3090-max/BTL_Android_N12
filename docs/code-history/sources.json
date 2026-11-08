@@ -1,0 +1,110 @@
+[
+  {
+    "image": "01-model-dose-record.png",
+    "title": "Mô hình lưu lịch sử uống thuốc",
+    "source": "app/src/main/java/com/example/medicationreminderapp/model/DoseRecord.java",
+    "startLine": 1,
+    "endLine": 26,
+    "sha256": "4c9ae1eee82eb3ce2e40635eb30866dd419126e9a496d7982e67577993bcf926",
+    "size": [
+      1912,
+      1238
+    ]
+  },
+  {
+    "image": "02-dao-dose-record.png",
+    "title": "Lưu và truy vấn lịch sử theo ngày",
+    "source": "app/src/main/java/com/example/medicationreminderapp/database/DoseRecordDao.java",
+    "startLine": 1,
+    "endLine": 22,
+    "sha256": "3a0c827045a9b151984aa7ef42b3ab430adc7da27fe93bb9f18f5cdc055e3467",
+    "size": [
+      2017,
+      1086
+    ]
+  },
+  {
+    "image": "03-room-database.png",
+    "title": "Khai báo bảng lịch sử trong Room",
+    "source": "app/src/main/java/com/example/medicationreminderapp/database/AppDatabase.java",
+    "startLine": 14,
+    "endLine": 37,
+    "sha256": "f04f326fb86062bed66fab6a4eda3ed30499962eb7436fe817d46641d9115580",
+    "size": [
+      1447,
+      1124
+    ]
+  },
+  {
+    "image": "04-chon-ngay.png",
+    "title": "Chọn ngày để xem các liều đã ghi nhận",
+    "source": "app/src/main/java/com/example/medicationreminderapp/activity/HomeActivity.java",
+    "startLine": 187,
+    "endLine": 200,
+    "sha256": "ba6ac600fb79086beb354e827ca647a53d227f3bb0358131a513029c70259fbc",
+    "size": [
+      1507,
+      744
+    ]
+  },
+  {
+    "image": "05-luu-xac-nhan-uong.png",
+    "title": "Xác nhận uống thuốc và hoàn tác",
+    "source": "app/src/main/java/com/example/medicationreminderapp/activity/HomeActivity.java",
+    "startLine": 202,
+    "endLine": 238,
+    "sha256": "ba6ac600fb79086beb354e827ca647a53d227f3bb0358131a513029c70259fbc",
+    "size": [
+      2047,
+      1656
+    ]
+  },
+  {
+    "image": "06-doc-lich-su-theo-ngay.png",
+    "title": "Đọc lịch sử và ghép trạng thái từng liều",
+    "source": "app/src/main/java/com/example/medicationreminderapp/activity/HomeActivity.java",
+    "startLine": 264,
+    "endLine": 305,
+    "sha256": "ba6ac600fb79086beb354e827ca647a53d227f3bb0358131a513029c70259fbc",
+    "size": [
+      2062,
+      1846
+    ]
+  },
+  {
+    "image": "07-hien-thi-trang-thai.png",
+    "title": "Hiển thị trạng thái và giờ đã uống",
+    "source": "app/src/main/java/com/example/medicationreminderapp/adapter/MedicineAdapter.java",
+    "startLine": 42,
+    "endLine": 72,
+    "sha256": "295bd80fcf66e78bc12515e9ab83bec57c5dfab58d3766e365d630c21b4e2573",
+    "size": [
+      1582,
+      1390
+    ]
+  },
+  {
+    "image": "08-tong-hop-va-trang-thai-rong.png",
+    "title": "Tổng số liều đã uống và trạng thái rỗng",
+    "source": "app/src/main/java/com/example/medicationreminderapp/activity/HomeActivity.java",
+    "startLine": 427,
+    "endLine": 470,
+    "sha256": "ba6ac600fb79086beb354e827ca647a53d227f3bb0358131a513029c70259fbc",
+    "size": [
+      1852,
+      1884
+    ]
+  },
+  {
+    "image": "09-luu-tu-chuong-bao.png",
+    "title": "Ghi nhận lần uống từ luồng chuông báo",
+    "source": "app/src/main/java/com/example/medicationreminderapp/service/AlarmService.java",
+    "startLine": 174,
+    "endLine": 198,
+    "sha256": "01317c05c082dbfe6c22481e89512e2300f7a8f8b8056fb6854a6802123c44f0",
+    "size": [
+      1837,
+      1162
+    ]
+  }
+]

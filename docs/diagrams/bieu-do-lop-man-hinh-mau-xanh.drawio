@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17" type="device">
+  <diagram id="screen-classes" name="1. Biểu đồ lớp màn hình">
+    <mxGraphModel dx="1600" dy="1050" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="BIỂU ĐỒ LỚP MÀN HÌNH" style="fontFamily=Arial;fontSize=16;fontColor=#111111;text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=27;fontStyle=1;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="25" width="1500" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Use case: Theo dõi lịch sử uống thuốc • Thiết kế đề xuất tầng giao diện" style="fontFamily=Arial;fontSize=16;fontColor=#111111;text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=18;fontStyle=0;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="80" y="75" width="1440" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="home" value="" style="fontFamily=Arial;fontSize=16;fontColor=#111111;rounded=0;fillColor=#78CDE8;strokeColor=#222222;strokeWidth=1.5;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="65" y="210" width="320" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="homehead" value="«boundary»&#10;HomeActivity" style="fontFamily=Arial;fontSize=16;fontColor=#111111;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#78CDE8;strokeColor=#222222;fontStyle=1;" vertex="1" parent="home">
+          <mxGeometry x="0" y="0" width="320" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="homeattrs" value="− selectedDate: String" style="fontFamily=Arial;fontSize=16;fontColor=#111111;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=12;fillColor=none;strokeColor=#222222;fontSize=15;" vertex="1" parent="home">
+          <mxGeometry x="0" y="65" width="320" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="homeops" value="+ openHistory(): void" style="fontFamily=Arial;fontSize=16;fontColor=#111111;text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=15;fontStyle=0;spacing=5;" vertex="1" parent="home">
+          <mxGeometry x="8" y="135" width="304" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="history" value="" style="fontFamily=Arial;fontSize=16;fontColor=#111111;rounded=0;fillColor=#78CDE8;strokeColor=#222222;strokeWidth=1.5;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="565" y="180" width="440" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="historyhead" value="«boundary»&#10;MedicationHistoryActivity" style="fontFamily=Arial;fontSize=16;fontColor=#111111;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#78CDE8;strokeColor=#222222;fontStyle=1;" vertex="1" parent="history">
+          <mxGeometry x="0" y="0" width="440" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="historyattrs" value="− selectedDate: String&#10;− records: List&lt;DoseRecord&gt;&#10;− selectedRecord: DoseRecord" style="fontFamily=Arial;fontSize=16;fontColor=#111111;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=12;fillColor=none;strokeColor=#222222;fontSize=15;" vertex="1" parent="history">
+          <mxGeometry x="0" y="65" width="440" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="historyops" value="+ showHistory(date: String): void&#10;+ openDatePicker(): void&#10;+ onDateSelected(date: String): void&#10;+ openDoseDetail(record): void&#10;+ showEmptyState(): void" style="fontFamily=Arial;fontSize=16;fontColor=#111111;text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=15;fontStyle=0;spacing=5;" vertex="1" parent="history">
+          <mxGeometry x="8" y="165" width="424" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="picker" value="" style="fontFamily=Arial;fontSize=16;fontColor=#111111;rounded=0;fillColor=#78CDE8;strokeColor=#222222;strokeWidth=1.5;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="1185" y="195" width="350" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="pickerhead" value="«boundary»&#10;HistoryDatePickerDialog" style="fontFamily=Arial;fontSize=16;fontColor=#111111;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#78CDE8;strokeColor=#222222;fontStyle=1;" vertex="1" parent="picker">
+          <mxGeometry x="0" y="0" width="350" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="pickerattrs" value="− selectedDate: String" style="fontFamily=Arial;fontSize=16;fontColor=#111111;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=12;fillColor=none;strokeColor=#222222;fontSize=15;" vertex="1" parent="picker">
+          <mxGeometry x="0" y="65" width="350" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pickerops" value="+ selectDate(date: String): void&#10;+ confirmDate(): void&#10;+ cancel(): void" style="fontFamily=Arial;fontSize=16;fontColor=#111111;text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=15;fontStyle=0;spacing=5;" vertex="1" parent="picker">
+          <mxGeometry x="8" y="135" width="334" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="detail" value="" style="fontFamily=Arial;fontSize=16;fontColor=#111111;rounded=0;fillColor=#78CDE8;strokeColor=#222222;strokeWidth=1.5;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="565" y="700" width="440" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="detailhead" value="«boundary»&#10;DoseRecordDetailActivity" style="fontFamily=Arial;fontSize=16;fontColor=#111111;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#78CDE8;strokeColor=#222222;fontStyle=1;" vertex="1" parent="detail">
+          <mxGeometry x="0" y="0" width="440" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="detailattrs" value="− record: DoseRecord&#10;− medicine: Medicine" style="fontFamily=Arial;fontSize=16;fontColor=#111111;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=12;fillColor=none;strokeColor=#222222;fontSize=15;" vertex="1" parent="detail">
+          <mxGeometry x="0" y="65" width="440" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="detailops" value="+ showRecord(record, medicine): void&#10;+ close(): void" style="fontFamily=Arial;fontSize=16;fontColor=#111111;text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=15;fontStyle=0;spacing=5;" vertex="1" parent="detail">
+          <mxGeometry x="8" y="135" width="424" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="empty" value="" style="fontFamily=Arial;fontSize=16;fontColor=#111111;rounded=0;fillColor=#78CDE8;strokeColor=#222222;strokeWidth=1.5;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="1185" y="700" width="350" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="emptyhead" value="«boundary»&#10;EmptyHistoryView" style="fontFamily=Arial;fontSize=16;fontColor=#111111;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#78CDE8;strokeColor=#222222;fontStyle=1;" vertex="1" parent="empty">
+          <mxGeometry x="0" y="0" width="350" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="emptyattrs" value="− displayedDate: String" style="fontFamily=Arial;fontSize=16;fontColor=#111111;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=12;fillColor=none;strokeColor=#222222;fontSize=15;" vertex="1" parent="empty">
+          <mxGeometry x="0" y="65" width="350" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="emptyops" value="+ show(date: String): void&#10;+ onChooseAnotherDate(): void" style="fontFamily=Arial;fontSize=16;fontColor=#111111;text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=15;fontStyle=0;spacing=5;" vertex="1" parent="empty">
+          <mxGeometry x="8" y="135" width="334" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="home-history" value="mở màn hình lịch sử" style="fontFamily=Arial;fontSize=16;fontColor=#111111;edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#333333;strokeWidth=1.5;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;whiteSpace=wrap;exitX=1;exitY=0.5;entryX=0;entryY=0.38;" edge="1" parent="1" source="home" target="history">
+          <mxGeometry relative="1" y="0" as="geometry" />
+        </mxCell>
+        <mxCell id="history-picker" value="mở / nhận ngày chọn" style="fontFamily=Arial;fontSize=16;fontColor=#111111;edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#333333;strokeWidth=1.5;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;whiteSpace=wrap;dashed=1;exitX=1;exitY=0.25;entryX=0;entryY=0.29;" edge="1" parent="1" source="history" target="picker">
+          <mxGeometry relative="1" y="0" as="geometry" />
+        </mxCell>
+        <mxCell id="history-detail" value="mở chi tiết lần uống" style="fontFamily=Arial;fontSize=16;fontColor=#111111;edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#333333;strokeWidth=1.5;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;whiteSpace=wrap;exitX=0.45;exitY=1;entryX=0.45;entryY=0;" edge="1" parent="1" source="history" target="detail">
+          <mxGeometry relative="1" y="0" as="geometry" />
+        </mxCell>
+        <mxCell id="history-empty" value="1                 trạng thái rỗng                 0..1" style="fontFamily=Arial;fontSize=16;fontColor=#111111;edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#333333;strokeWidth=1.5;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;whiteSpace=wrap;startArrow=diamond;startFill=1;endArrow=none;exitX=1;exitY=0.8;entryX=0;entryY=0.4;" edge="1" parent="1" source="history" target="empty">
+          <mxGeometry relative="1" y="0" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="460" />
+              <mxPoint x="1090" y="792" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="Ghi chú thiết kế&#10;• HomeActivity đã có trong dự án; thao tác mở lịch sử là phần bổ sung đề xuất.&#10;• Các lớp còn lại là giao diện đề xuất theo bản hình dung màn hình.&#10;• EmptyHistoryView là trạng thái con của màn hình lịch sử, không phải một Activity riêng.&#10;• DoseRecord và Medicine là kiểu dữ liệu hiện có; DAO và cơ sở dữ liệu không thuộc phạm vi biểu đồ màn hình." style="fontFamily=Arial;fontSize=16;fontColor=#111111;text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=15;fontStyle=0;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="55" y="690" width="455" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="«boundary»: lớp giao diện  •  Mũi tên nét liền: điều hướng  •  Nét đứt: sử dụng hộp thoại  •  Hình thoi đặc: thành phần được sở hữu" style="fontFamily=Arial;fontSize=16;fontColor=#111111;text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=14;fontStyle=0;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="90" y="970" width="1420" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  </mxfile>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_header_tall"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.HomeActivity">
+
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="Lịch uống thuốc"
+        android:textColor="#CCFFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMonth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="12dp"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnPrevMonth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGreeting"
+        tools:text="Tháng 10 năm 2026" />
+
+    <ImageButton
+        android:id="@+id/btnPrevMonth"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_icon_button_translucent"
+        android:contentDescription="Previous Month"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvMonth"
+        app:layout_constraintEnd_toStartOf="@+id/btnNextMonth"
+        app:layout_constraintTop_toTopOf="@id/tvGreeting"
+        app:srcCompat="@drawable/ic_arrow_left"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/btnNextMonth"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_icon_button_translucent"
+        android:contentDescription="Next Month"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvMonth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvGreeting"
+        app:srcCompat="@drawable/ic_arrow_right"
+        app:tint="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMonth" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardNextDose"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_next_dose"
+        android:elevation="6dp"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvDate"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ivNextIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_icon_button_translucent"
+            android:importantForAccessibility="no"
+            android:padding="11dp"
+            android:src="@drawable/ic_pill"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNextLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="8dp"
+            android:letterSpacing="0.1"
+            android:textColor="#8FE3C4"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnNextTaken"
+            app:layout_constraintStart_toEndOf="@id/ivNextIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="LIỀU TIẾP THEO" />
+
+        <TextView
+            android:id="@+id/tvNextName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnNextTaken"
+            app:layout_constraintStart_toEndOf="@id/ivNextIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvNextLabel"
+            tools:text="Paracetamol 500mg" />
+
+        <TextView
+            android:id="@+id/tvNextTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#B3FFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/btnNextTaken"
+            app:layout_constraintStart_toEndOf="@id/ivNextIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvNextName"
+            tools:text="08:00 AM · Sau khi ăn" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNextTaken"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_button_light"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingHorizontal="16dp"
+            android:stateListAnimator="@null"
+            android:text="Uống ngay"
+            android:textAllCaps="false"
+            android:textColor="@color/green_dark"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Liều thuốc trong ngày"
+        android:textAppearance="@style/TextAppearance.App.Section"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardNextDose" />
+
+    <TextView
+        android:id="@+id/tvSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_time_badge"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:textColor="@color/green_dark"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tvSection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvSection"
+        tools:text="1/3 đã uống"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMedicine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="110dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSection" />
+
+    <LinearLayout
+        android:id="@+id/layoutEmpty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="32dp"
+        android:paddingBottom="96dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/rvMedicine"
+        app:layout_constraintEnd_toEndOf="@id/rvMedicine"
+        app:layout_constraintStart_toStartOf="@id/rvMedicine"
+        app:layout_constraintTop_toTopOf="@id/rvMedicine">
+
+        <ImageView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:background="@drawable/bg_circle"
+            android:importantForAccessibility="no"
+            android:padding="22dp"
+            android:src="@drawable/ic_pill" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Không có liều thuốc nào"
+            android:textAppearance="@style/TextAppearance.App.Section" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Nhấn nút + để thêm đơn thuốc mới"
+            android:textAppearance="@style/TextAppearance.App.Subtitle" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="4dp"
+        android:contentDescription="@string/add_medicine"
+        app:backgroundTint="@color/green_primary"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.Fab"
+        app:srcCompat="@drawable/ic_add"
+        app:tint="@color/white" />
+
+    <include
+        android:id="@+id/bottom_navigation"
+        layout="@layout/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

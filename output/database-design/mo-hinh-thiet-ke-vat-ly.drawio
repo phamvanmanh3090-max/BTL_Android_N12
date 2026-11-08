@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="physical-db" name="Mô hình thiết kế vật lý">
+    <mxGraphModel page="1" pageScale="1" pageWidth="1400" pageHeight="1160" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="medicines" value="" vertex="1" parent="1" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=#F8D5AA;strokeColor=#654A30;container=1;">
+          <mxGeometry x="390" y="40" width="620" height="422" as="geometry" />
+        </mxCell>
+        <mxCell id="medicineshead" value="medicines" vertex="1" parent="medicines" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=#F0B877;strokeColor=#654A30;fontSize=33;fontStyle=1;align=left;spacingLeft=18;">
+          <mxGeometry x="0" y="0" width="620" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="medicines0" value="PK    medicineId    INTEGER" vertex="1" parent="medicines" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="65" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="medicines1" value="    name    TEXT" vertex="1" parent="medicines" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="111" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="medicines2" value="    frequency    TEXT" vertex="1" parent="medicines" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="157" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="medicines3" value="    startDate    INTEGER" vertex="1" parent="medicines" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="203" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="medicines4" value="    endDate    INTEGER" vertex="1" parent="medicines" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="249" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="medicines5" value="    notes    TEXT" vertex="1" parent="medicines" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="295" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="medicines6" value="    times    TEXT" vertex="1" parent="medicines" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="341" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="alarms" value="" vertex="1" parent="1" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=#F8D5AA;strokeColor=#654A30;container=1;">
+          <mxGeometry x="25" y="695" width="620" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="alarmshead" value="alarms" vertex="1" parent="alarms" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=#F0B877;strokeColor=#654A30;fontSize=33;fontStyle=1;align=left;spacingLeft=18;">
+          <mxGeometry x="0" y="0" width="620" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="alarms0" value="PK    id    INTEGER" vertex="1" parent="alarms" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="65" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="alarms1" value="FK    medicine_id    INTEGER" vertex="1" parent="alarms" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="111" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="alarms2" value="    time    INTEGER" vertex="1" parent="alarms" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="157" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="alarms3" value="    enabled    INTEGER" vertex="1" parent="alarms" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="203" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="alarms4" value="    scheduled_time    TEXT" vertex="1" parent="alarms" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="249" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="dose_records" value="" vertex="1" parent="1" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=#F8D5AA;strokeColor=#654A30;container=1;">
+          <mxGeometry x="755" y="695" width="620" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="dose_recordshead" value="dose_records" vertex="1" parent="dose_records" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=#F0B877;strokeColor=#654A30;fontSize=33;fontStyle=1;align=left;spacingLeft=18;">
+          <mxGeometry x="0" y="0" width="620" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="dose_records0" value="PK1    medicineId    INTEGER" vertex="1" parent="dose_records" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="65" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="dose_records1" value="PK2    date    TEXT" vertex="1" parent="dose_records" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="111" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="dose_records2" value="PK3    scheduledTime    TEXT" vertex="1" parent="dose_records" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="157" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="dose_records3" value="    isTaken    INTEGER" vertex="1" parent="dose_records" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="203" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="dose_records4" value="    timeTaken    TEXT" vertex="1" parent="dose_records" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;spacingLeft=4;">
+          <mxGeometry x="8" y="249" width="604" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="fk-alarm" value="1 : 0..*   ON DELETE CASCADE" edge="1" parent="1" source="medicines" target="alarms" style="edgeStyle=orthogonalEdgeStyle;exitX=0.225;exitY=1;entryX=0.5;entryY=0;endArrow=none;strokeColor=#654A30;strokeWidth=2;dashed=0;fontFamily=Arial;fontSize=25;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="logic-dose" value="1 : 0..*   Liên hệ logic, chưa có FK" edge="1" parent="1" source="medicines" target="dose_records" style="edgeStyle=orthogonalEdgeStyle;exitX=0.775;exitY=1;entryX=0.5;entryY=0;endArrow=none;strokeColor=#654A30;strokeWidth=2;dashed=1;fontFamily=Arial;fontSize=25;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="PK: khóa chính | FK: khóa ngoại | PK1 + PK2 + PK3: khóa chính ghép" vertex="1" parent="1" style="html=0;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fillColor=none;strokeColor=none;align=left;">
+          <mxGeometry x="25" y="1070" width="1350" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
