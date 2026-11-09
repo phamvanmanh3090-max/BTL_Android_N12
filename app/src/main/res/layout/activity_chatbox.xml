@@ -4,19 +4,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@color/background"
+    android:fitsSystemWindows="true">
 
+    <LinearLayout
+        android:id="@+id/chat_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_home_calendar"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tư vấn sức khỏe"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/chat_conversation_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Cuộc trò chuyện mới"
+            android:textColor="@color/green_light"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_chat_history"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:paddingHorizontal="4dp"
+                android:text="Lịch sử"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_new_chat"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:minHeight="48dp"
+                android:paddingHorizontal="4dp"
+                android:text="Trò chuyện mới"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_delete_chat"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:minHeight="48dp"
+                android:paddingHorizontal="4dp"
+                android:text="Xóa"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_chat"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/suggestion_container"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/chat_header"
+        app:layout_constraintBottom_toTopOf="@id/chat_status"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+
+    <TextView
+        android:id="@+id/chat_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="8dp"
+        android:text="Trợ lý đang trả lời…"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/suggestion_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <HorizontalScrollView
         android:id="@+id/suggestion_container"
@@ -82,8 +173,9 @@
             android:id="@+id/edit_text_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nhập..."
-            android:inputType="text" />
+            android:hint="Nhập câu hỏi…"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="4" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -105,7 +197,4 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout
-
-
-    >
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,16 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_header_tall"
+    android:background="@color/background"
     android:fitsSystemWindows="true"
     tools:context=".activity.HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/calendarHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_home_calendar"
+        android:paddingTop="12dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     <TextView
         android:id="@+id/tvGreeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
         android:text="Lịch uống thuốc"
         android:textColor="#CCFFFFFF"
         android:textSize="14sp"
@@ -69,23 +79,26 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
         android:layout_marginTop="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvMonth" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cardNextDose"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/bg_next_dose"
-        android:elevation="6dp"
+        android:elevation="2dp"
         android:padding="16dp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rvDate"
+        app:layout_constraintTop_toBottomOf="@id/calendarHeader"
         tools:visibility="visible">
 
         <ImageView
@@ -123,7 +136,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="8dp"
             android:ellipsize="end"
-            android:maxLines="1"
+            android:maxLines="2"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -139,18 +152,19 @@
             android:layout_marginStart="14dp"
             android:layout_marginEnd="8dp"
             android:ellipsize="end"
-            android:maxLines="1"
+            android:maxLines="2"
             android:textColor="#B3FFFFFF"
             android:textSize="13sp"
             app:layout_constraintEnd_toStartOf="@+id/btnNextTaken"
             app:layout_constraintStart_toEndOf="@id/ivNextIcon"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvNextName"
             tools:text="08:00 AM · Sau khi ăn" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnNextTaken"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:background="@drawable/bg_button_light"
             android:minWidth="0dp"
             android:minHeight="0dp"
@@ -168,14 +182,18 @@
 
     <TextView
         android:id="@+id/tvSection"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
         android:text="Liều thuốc trong ngày"
         android:textAppearance="@style/TextAppearance.App.Section"
+        android:textColor="@color/green_dark"
+        app:layout_constraintEnd_toStartOf="@id/tvSummary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardNextDose" />
+        app:layout_constraintTop_toBottomOf="@id/cardNextDose"
+        app:layout_goneMarginTop="24dp" />
 
     <TextView
         android:id="@+id/tvSummary"
@@ -195,17 +213,25 @@
         tools:text="1/3 đã uống"
         tools:visibility="visible" />
 
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/sectionBottomBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierAllowsGoneWidgets="false"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvSection,tvSummary" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMedicine"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:clipToPadding="false"
-        android:paddingBottom="110dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="88dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvSection" />
+        app:layout_constraintTop_toBottomOf="@id/sectionBottomBarrier" />
 
     <LinearLayout
         android:id="@+id/layoutEmpty"
@@ -214,7 +240,7 @@
         android:gravity="center"
         android:orientation="vertical"
         android:paddingHorizontal="32dp"
-        android:paddingBottom="96dp"
+        android:paddingBottom="56dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/rvMedicine"
         app:layout_constraintEnd_toEndOf="@id/rvMedicine"
@@ -250,7 +276,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/add_medicine"
         app:backgroundTint="@color/green_primary"
         app:borderWidth="0dp"
